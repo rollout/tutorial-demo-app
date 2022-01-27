@@ -1,0 +1,1 @@
+export const DASHBOARD_BASE_URL = process.env.REACT_APP_DASHBOARD_BASE_URL || 'http://app.rollout.io'
