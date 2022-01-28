@@ -12,9 +12,9 @@ export function BooleanFeatureOn({events}: {events: RoxFetcherResult[]}) {
       <p>
         <Nice>Feature enabled!</Nice> 
         </p><p>
-        It is a log of the configuration data fetched by the Feature Management SDK. 
+        Below is a log of the configuration changes from Feature Management SDK.
         </p><p>
-        You can disable it back in
+        You can disable it again wit the flag
         <FlagLink flag={FeatureFlags.features.displayConfigFetchHistory} />.
       </p>
       <EventList events={events}/>

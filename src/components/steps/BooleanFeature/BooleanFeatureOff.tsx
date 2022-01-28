@@ -7,12 +7,12 @@ export function BooleanFeatureOff() {
     <section>
       <SectionTitle>2. Enable a new feature</SectionTitle>
       <p>
-        You engineering team has just released a new feature!
+        Your engineering team has just released a new feature!
       </p>
       <p>
-        Toggle on the feature flag {" "}
+        Enable targeting for the feature flag {" "}
         <FlagLink flag={FeatureFlags.features.displayConfigFetchHistory} /> and
-        changing its value to <code>true</code>.
+        set its value to <code>true</code>.
       </p>
     </section>
   );
