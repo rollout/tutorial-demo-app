@@ -6,7 +6,6 @@ import { StringFeatureUnmodified } from "./components/steps/StringFeature/String
 import { StringFeatureModified } from "./components/steps/StringFeature/StringFeatureModified";
 import { BooleanFeatureOn } from "./components/steps/BooleanFeature/BooleanFeatureOn";
 import { BooleanFeatureOff } from "./components/steps/BooleanFeature/BooleanFeatureOff";
-import { FeatureFlags } from "./configuration/FeatureFlags";
 
 function App() {
   const { initialized } = useFeatureFlags();

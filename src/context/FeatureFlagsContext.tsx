@@ -23,7 +23,6 @@ type ContextState = {
 type Action =
   | { type: "initialized" }
   | { type: "initializedFailed" }
-  | { type: "initializedFailed" }
   | { type: "fetchedResult"; payload: RoxFetcherResult };
 
 const initialState = {
@@ -73,8 +72,8 @@ export const FeatureFlagsContextProvider = ({
   }, []);
 
   useEffect(() => {
-    attemptRoxSetup();
-  }, []);
+    attemptRoxSetup().then(() => {});
+  }, [attemptRoxSetup]);
 
   const value = useMemo(()=> ({
     ...state,
@@ -90,7 +89,7 @@ export const FeatureFlagsContextProvider = ({
 
 export function useFeatureFlags() {
     const state = useContext(FeatureFlagsContext)
-    if(!state) throw "useFeatureFlags can only be used inside a FeatureFlagsContextProvider"
+    if(!state) throw new Error("useFeatureFlags can only be used inside a FeatureFlagsContextProvider")
 
     return state
 }
