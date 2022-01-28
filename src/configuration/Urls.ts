@@ -6,6 +6,6 @@ export const Urls = {
         return `${DASHBOARD_BASE_URL}/app/${encodeURIComponent(QueryParams.application_id)}/environment/${QueryParams.environment_id}/flags`
     },
     featureFlagUrl(flagName: string) {
-        return `${this.featureFlagsListUrl()}?filter=${encodeURIComponent(flagName)}`
+        return `${this.featureFlagsListUrl()}/${encodeURIComponent(flagName)}/default`
     }
 }
