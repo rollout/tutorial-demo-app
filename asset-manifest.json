@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tutorial-demo-app/static/css/main.d3f0cd97.css",
+    "main.js": "/tutorial-demo-app/static/js/main.4419f0d1.js",
+    "index.html": "/tutorial-demo-app/index.html",
+    "main.d3f0cd97.css.map": "/tutorial-demo-app/static/css/main.d3f0cd97.css.map",
+    "main.4419f0d1.js.map": "/tutorial-demo-app/static/js/main.4419f0d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3f0cd97.css",
+    "static/js/main.4419f0d1.js"
+  ]
+}
