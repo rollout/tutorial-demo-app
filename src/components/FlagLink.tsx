@@ -1,5 +1,6 @@
 import { MouseEventHandler } from "react";
 import { Urls } from "../configuration/Urls";
+import { ExternalLinkIcon } from "./icons/ExternalLinkIcon";
 
 export function FlagLink({ flag }: { flag: {name: string} }) {
   const url = Urls.featureFlagUrl(flag.name);
@@ -12,6 +13,7 @@ export function FlagLink({ flag }: { flag: {name: string} }) {
   return (
     <a className="ff-link" href={url} target="_blank" rel="noopener noreferrer" onClick={openInPopup}>
       {flag.name}
+      <ExternalLinkIcon />
     </a>
   );
 }

@@ -44,6 +44,12 @@ a {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   margin-left: 2px;
   margin-right: 2px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ff-link .externalLinkIcon {
+  margin-left: 0.5em;
 }
 
 code {
