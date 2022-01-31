@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/tutorial-demo-app/static/css/main.d3f0cd97.css",
-    "main.js": "/tutorial-demo-app/static/js/main.ac024c6c.js",
+    "main.js": "/tutorial-demo-app/static/js/main.73b4b4f7.js",
     "index.html": "/tutorial-demo-app/index.html",
     "main.d3f0cd97.css.map": "/tutorial-demo-app/static/css/main.d3f0cd97.css.map",
-    "main.ac024c6c.js.map": "/tutorial-demo-app/static/js/main.ac024c6c.js.map"
+    "main.73b4b4f7.js.map": "/tutorial-demo-app/static/js/main.73b4b4f7.js.map"
   },
   "entrypoints": [
     "static/css/main.d3f0cd97.css",
-    "static/js/main.ac024c6c.js"
+    "static/js/main.73b4b4f7.js"
   ]
 }
