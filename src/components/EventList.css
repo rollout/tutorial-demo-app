@@ -64,11 +64,10 @@
 .configFetch-hasChanges span,
 .configFetch-noChanges span {
   margin-left: 1rem;
-  font-size: 0.8rem;
   color: white;
   font-size: 0.9rem;
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: 0.25rem;
   width: 140px;
   display: inline-block;
 }
