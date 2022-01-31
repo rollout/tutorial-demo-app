@@ -8,6 +8,14 @@ body {
   text-align: center; 
   background-color: var(--background-color);
   color: var(--color);
+  min-width: 500px;
+}
+
+:root {
+  --badge-secondary-color: #75777a;
+  /* HUI primary-dark */
+  --badge-primary-color: #0167a1;
+  --badge-error-color: #a10129;
 }
 
 body.theme-dark {
@@ -19,9 +27,10 @@ body.theme-dark {
 }
 
 body.theme-light {
-  --background-color: #f1f5ff;
+  --background-color: #f3f7ff;
   --color: #3f3f3f;
-  --link-color: #0b86a8;
+  /* HUI primary */
+  --link-color: #007acc;  
   --code-color: #9700fd;
   --success-color: green;
 }

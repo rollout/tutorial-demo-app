@@ -40,16 +40,16 @@
 
 .configFetch-status-cache,
 .configFetch-status-embedded {
-  color: #75777a;
+  color: var(--badge-secondary-color);
 }
 
 .configFetch-status-network {
-  color: #0167a1;
+  color: var(--badge-primary-color);
 }
 
 .configFetch-error,
 .configFetch-status-error {
-  color: #a10129;
+  color: var(--badge-error-color);
 }
 
 .configFetch-error {
@@ -73,10 +73,10 @@
 }
 
 .configFetch-noChanges span {
-  background-color: #75777a;
+  background-color: var(--badge-secondary-color);
 }
 
 .configFetch-hasChanges span{
-  background-color: #0389d7;
+  background-color: var(--badge-primary-color);
   font-weight: bold;
 }
