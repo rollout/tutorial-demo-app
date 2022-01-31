@@ -12,10 +12,11 @@ export function BooleanFeatureOn({events}: {events: RoxFetcherResult[]}) {
       <p>
         <Nice>Feature enabled!</Nice> 
         </p><p>
-        Below is a log of the configuration changes from Feature Management SDK.
+        Below is a log of the configuration changes from the CloudBees Feature Management SDK.
         </p><p>
-        You can disable it again wit the flag
-        <FlagLink flag={FeatureFlags.features.displayConfigFetchHistory} />.
+        You can disable the color change using the
+        {' '}<FlagLink flag={FeatureFlags.features.displayConfigFetchHistory} />{' '}
+        flag.
       </p>
       <EventList events={events}/>
     </section>

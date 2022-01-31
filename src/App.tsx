@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1>
-        CloudBees Feature Management Demo Application
+        CloudBees Feature Management demo application
       </h1>
       <AppKeyError />
       {initialized && <AppContent />}
@@ -27,8 +27,8 @@ function AppContent() {
   document.body.className = `theme-${featureFlags.styles.theme.getValue()}`
 
   return (<div>
-    <p>This interactive demo uses the <a href="https://www.npmjs.com/package/rox-browser" target="_blank" rel="noreferrer" >javascript SDK for web browsers</a>.</p>
-    <p>It creates and uses two feature flags. These flags will automatically be created in the dashboard when the code runs.</p>
+      <p>This interactive demo uses the <a href="https://www.npmjs.com/package/rox-browser" target="_blank" rel="noreferrer">JavaScript SDK for web browsers</a> to create two
+          feature flags. The flags are automatically be created in the dashboard when the code runs.</p>
       <div className="AppContent">
         {featureFlags.styles.theme.getValue() === "dark" ? (
           <StringFeatureUnmodified />
