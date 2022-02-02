@@ -20,6 +20,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 600px;
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%)
 }
 
 .configFetch-date {
@@ -39,16 +40,16 @@
 
 .configFetch-status-cache,
 .configFetch-status-embedded {
-  color: #75777a;
+  color: var(--badge-secondary-color);
 }
 
 .configFetch-status-network {
-  color: #0167a1;
+  color: var(--badge-primary-color);
 }
 
 .configFetch-error,
 .configFetch-status-error {
-  color: #a10129;
+  color: var(--badge-error-color);
 }
 
 .configFetch-error {
@@ -63,20 +64,19 @@
 .configFetch-hasChanges span,
 .configFetch-noChanges span {
   margin-left: 1rem;
-  font-size: 0.8rem;
   color: white;
   font-size: 0.9rem;
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: 0.25rem;
   width: 140px;
   display: inline-block;
 }
 
 .configFetch-noChanges span {
-  background-color: #75777a;
+  background-color: var(--badge-secondary-color);
 }
 
 .configFetch-hasChanges span{
-  background-color: #0389d7;
+  background-color: var(--badge-primary-color);
   font-weight: bold;
 }

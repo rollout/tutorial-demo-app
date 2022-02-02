@@ -1,16 +1,18 @@
+.App {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 .AppContent {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 3rem;
 }
 
 .AppContent section  {
-    flex: 0 1 760px;
+    flex: 0 1 820px;
     padding-bottom: 3rem;
     padding-top: 2.5rem;
     border-top: 2px solid var(--color);
-}
-
-.sectionTitle {
-
 }

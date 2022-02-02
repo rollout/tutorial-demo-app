@@ -28,7 +28,7 @@ function AppContent() {
 
   return (<div>
       <p>This interactive demo uses the <a href="https://www.npmjs.com/package/rox-browser" target="_blank" rel="noreferrer">JavaScript SDK for web browsers</a> to create two
-          feature flags. The flags are automatically be created in the dashboard when the code runs.</p>
+          feature flags. The flags are automatically created in the dashboard when the code runs.</p>
       <div className="AppContent">
         {featureFlags.styles.theme.getValue() === "dark" ? (
           <StringFeatureUnmodified />

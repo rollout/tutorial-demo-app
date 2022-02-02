@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Tutorial demo app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## URL
+
+The url is `https://rollout.github.io/tutorial-demo-app`, with the query parameters `application_id` and `environment_id`
 
 ## Available Scripts
 
@@ -23,3 +25,7 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Deployment
+
+Any change in the master branch is automatically deployed by a GH action
