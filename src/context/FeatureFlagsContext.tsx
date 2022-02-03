@@ -64,6 +64,7 @@ export const FeatureFlagsContextProvider = ({
     try {
       console.log("Initializing rox")
       await Rox.setup(QueryParams.environment_id, {
+        debugLevel: QueryParams.debugSdk ? 'verbose' : undefined,
         configurationFetchedHandler: (fetcherResult: RoxFetcherResult) => {
           dispatch({type: "fetchedResult", payload: fetcherResult})
         },
