@@ -1,4 +1,4 @@
-import React, {
+import {
   createContext,
   ReactNode,
   useCallback,
@@ -9,8 +9,8 @@ import React, {
 } from "react";
 import { RoxFetcherResult } from "rox-browser";
 import { FeatureFlags } from "../configuration/FeatureFlags";
-import { roxSetup } from "../configuration/FeatureManagementSetup";
 import { QueryParams } from "../configuration/QueryParams";
+import Rox from 'rox-browser'
 
 type ContextState = {
   initialized: boolean;
@@ -62,17 +62,23 @@ export const FeatureFlagsContextProvider = ({
 
   const attemptRoxSetup = useCallback(async () => {
     try {
-      await roxSetup(QueryParams.environment_id, (fetcherResult: RoxFetcherResult) => {
-        dispatch({type: "fetchedResult", payload: fetcherResult})
+      console.log("Initializing rox")
+      await Rox.setup(QueryParams.environment_id, {
+        debugLevel: QueryParams.debugSdk ? 'verbose' : undefined,
+        configurationFetchedHandler: (fetcherResult: RoxFetcherResult) => {
+          dispatch({type: "fetchedResult", payload: fetcherResult})
+        },
       });
+      console.log("Rox was initialized")
       dispatch({type: "initialized"})
     } catch (err) {
+      console.error("Rox initialization failed", err)
       dispatch({type: "initializedFailed"})
     }
   }, []);
 
   useEffect(() => {
-    attemptRoxSetup().then(() => {});
+    attemptRoxSetup();
   }, [attemptRoxSetup]);
 
   const value = useMemo(()=> ({
