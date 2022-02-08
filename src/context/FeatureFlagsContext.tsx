@@ -11,6 +11,7 @@ import { RoxFetcherResult } from "rox-browser";
 import { FeatureFlags } from "../configuration/FeatureFlags";
 import { QueryParams } from "../configuration/QueryParams";
 import Rox from 'rox-browser'
+import { SDK_MS_TO_FIRST_FETCH } from "../configuration/Envs";
 
 type ContextState = {
   initialized: boolean;
@@ -76,7 +77,7 @@ export const FeatureFlagsContextProvider = ({
         //When the environment has never been initialized before, because some edge conditions, SSE may not be started properly
         //Forcing the fetch makes sure it will be
         Rox.fetch()
-      }, 10000)
+      }, SDK_MS_TO_FIRST_FETCH)
 
     } catch (err) {
       console.error("Rox initialization failed", err)
