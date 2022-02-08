@@ -1,4 +1,4 @@
-import { FeatureFlags } from "../../../configuration/FeatureFlags";
+import { FeatureFlags } from "../../../lib/featureManagement/FeatureFlags";
 import { FlagLink } from "../../FlagLink";
 import { SectionTitle } from "../../SectionTitle";
 

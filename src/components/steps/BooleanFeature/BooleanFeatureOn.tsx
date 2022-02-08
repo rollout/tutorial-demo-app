@@ -1,7 +1,7 @@
 import { FlagLink } from "../../FlagLink";
 import {EventList} from '../../EventList'
 import { RoxFetcherResult } from "rox-browser";
-import { FeatureFlags } from "../../../configuration/FeatureFlags";
+import { FeatureFlags } from "../../../lib/featureManagement/FeatureFlags";
 import { SectionTitle } from "../../SectionTitle";
 
 export function BooleanFeatureOn({events}: {events: RoxFetcherResult[]}) {

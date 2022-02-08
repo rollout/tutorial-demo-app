@@ -1,19 +1,15 @@
 import { MouseEvent } from "react";
 import { QueryParams } from "../configuration/QueryParams";
-import { useFeatureFlags } from "../context/FeatureFlagsContext";
+import { Urls } from "../configuration/Urls";
 
 export function AppKeyError() {
-
-  const {attemptRoxSetup, initializationFailed} = useFeatureFlags()
 
   const onClick = (ev: MouseEvent<HTMLAnchorElement>)=> {
     ev.preventDefault()
     QueryParams.environment_id = prompt("Enter your application key (which is the environment id)") || ''
     QueryParams.application_id = prompt("Enter your application id") || ''
-    attemptRoxSetup?.()
+    window.location.href = Urls.thisWebUrl(QueryParams).toString()
   }
-
-  if(!initializationFailed) return null
 
   return (
     <div className="error">
