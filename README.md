@@ -13,7 +13,7 @@ The url is `https://rollout.github.io/tutorial-demo-app`, with the query paramet
 
 Other query parameters:
 
-- `debug` - enables the verbose log level of the SDK
+- `debug_sdk=true` - enables the verbose log level of the SDK
 
 ## How this application works internally
 
