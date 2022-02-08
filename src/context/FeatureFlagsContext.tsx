@@ -71,6 +71,13 @@ export const FeatureFlagsContextProvider = ({
       });
       console.log("Rox was initialized")
       dispatch({type: "initialized"})
+
+      setTimeout(async ()=> {
+        //When the environment has never been initialized before, because some edge conditions, SSE may not be started properly
+        //Forcing the fetch makes sure it will be
+        Rox.fetch()
+      }, 10000)
+
     } catch (err) {
       console.error("Rox initialization failed", err)
       dispatch({type: "initializedFailed"})
