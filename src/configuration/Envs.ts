@@ -1,1 +1,2 @@
 export const DASHBOARD_BASE_URL = process.env.REACT_APP_DASHBOARD_BASE_URL || 'http://app.rollout.io'
+export const SDK_MS_TO_FIRST_FETCH = process.env.REACT_APP_SDK_MS_TO_FIRST_FETCH ? Number.parseInt(process.env.REACT_APP_SDK_MS_TO_FIRST_FETCH) : 20000
