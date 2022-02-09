@@ -10,7 +10,7 @@ import { RoxFetcherResult } from "rox-browser";
 import { FeatureFlags } from "./FeatureFlags";
 import { missingRequiredQueryParameters, QueryParams } from "../../configuration/QueryParams";
 import Rox from 'rox-browser'
-import { SDK_MS_TO_FIRST_FETCH } from "../configuration/Envs";
+import { SDK_MS_TO_FIRST_FETCH } from "../../configuration/Envs";
 
 type ContextState = {
   initialized: boolean;
