@@ -26,25 +26,27 @@ Other query parameters:
   - `src/lib/FeatureFlags.ts` - creates and registers the Feature Flags objects
   - `src/lib/FeatureFlagsContext.tsx` - React context that holds the feature flags objects used by the components. When feature flags are modified in the dashboard, the components automatically pick the updated values. It also initializes the SDK when mounted. 
 
-### What happens behind the scenes
+### How the Feature Management SDK is used
 
-The following is an explanation of what happens at startup
+The following is an explanation of what happens at startup:
 
-1. The feature flags are registered, using the Feature Management SDK (link)
-2. The UI (which uses the feature flags registered in 1) is rendered
-   * There is no need to wait to setup the SDK. The feature flags return their default values.
-   * We keep the the feature flags in a react context (link) called FeatureFlagsContext (link). The components take the feature flags from that context (link).
-3. The Feature Management SDK is setup with your appKey (link)
-   * If the feature flags do not exist in the Feature Management platform, the SDK will automatically create them. They will be immediately visible in the [dashboard](https://app.rollout.io).
-4. The Feature Management SDK is also configured to listen for any changes in the feature flags in the Feature Management platform (link). 
-   * This feature is optional, see here for more details (link)
-5. Asynchronously, the SDK fetches the feature flags configuration from the Feature Management platform.
-6. After the SDK fetches a feature flag configuration or the configuration changes:
-   1. The `configurationFetchedHandler` listener is notified (link).
-   2. The value of the FeatureFlagsContext is updated
-   3. And the UI components using the feature flags from the FeatureFlagsContext are updated with the new values
+1. The feature flags are registered, using the Feature Management SDK.  &nbsp; [:memo: code](https://github.com/rollout/tutorial-demo-app/blob/v0.0.1/src/configuration/FeatureFlags.ts#L3-L10)
+2. The UI (which uses the feature flags registered in `1`) is rendered.
+   * There is no need to wait to setup the SDK. The feature flags return their [default values](https://docs.cloudbees.com/docs/cloudbees-feature-management/latest/feature-flags/about-feature-flags#_default_values_of_flags).
+   * We keep the the feature flags in a react context called FeatureFlagsContext. &nbsp; [:memo: code](https://github.com/rollout/tutorial-demo-app/blob/v0.0.1/src/context/FeatureFlagsContext.tsx#L55)
+   * The components take the feature flags from the FeatureFlagsContext. &nbsp;[:memo: code](https://github.com/rollout/tutorial-demo-app/blob/v0.0.1/src/App.tsx#L25)
+3. The Feature Management SDK is setup with your [appKey](https://docs.cloudbees.com/docs/cloudbees-feature-management/latest/getting-started/javascript-sdk). &nbsp; [:memo: code](https://github.com/rollout/tutorial-demo-app/blob/c9666184dc99330369a3130d77326025c2f3d021/src/context/FeatureFlagsContext.tsx#L67)
+   * If the feature flags do not exist in the Feature Management platform, the SDK will [automatically create](https://docs.cloudbees.com/docs/cloudbees-feature-management/latest/feature-flags/creating-feature-flags) them. They will be immediately visible in [app.rollout.io](https://app.rollout.io).
+4. Asynchronously, the SDK fetches the feature flags configuration from the [Feature Management backend](https://app.rollout.io).
+   * Any remote change in the feature flags will be automatically fetched too.
+5. After the initial or subsequent configuration fetches:
+   1. The [`configurationFetchedHandler` listener](https://docs.cloudbees.com/docs/cloudbees-feature-management-api/latest/api-reference/javascript-browser-api#_configurationfetchedhandler) is notified. &nbsp; [:memo: code](https://github.com/rollout/tutorial-demo-app/blob/c9666184dc99330369a3130d77326025c2f3d021/src/context/FeatureFlagsContext.tsx#L69)
+   2. The FeatureFlagsContext is updated. &nbsp; [:memo: code](https://github.com/rollout/tutorial-demo-app/blob/v0.0.1/src/context/FeatureFlagsContext.tsx#L44-L50)
+   3. And the UI components using the feature flags from the FeatureFlagsContext are updated with the new values.
 
-
+> :information_source: This application has some extra complexity to be able to instantly update the UI when the feature flags change. 
+> 
+> If you don't need that in your application, have a look at a simpler example in [Getting started with Javascript SDK](https://docs.cloudbees.com/docs/cloudbees-feature-management/latest/getting-started/javascript-sdk)
 
 ## Development
 
