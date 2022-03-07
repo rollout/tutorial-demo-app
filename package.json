@@ -4,9 +4,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@bugsnag/js": "^7.16.1",
+    "@bugsnag/plugin-react": "^7.16.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "@fullstory/browser": "^1.5.1",
     "@mui/icons-material": "^5.3.1",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
