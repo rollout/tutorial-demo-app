@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
 import { FeatureFlagsContextProvider } from './context/FeatureFlagsContext';
 import { Analytics } from './lib/Analytics';
 import Bugsnag from '@bugsnag/js'

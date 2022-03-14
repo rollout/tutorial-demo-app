@@ -4,26 +4,24 @@ import {
   useCallback,
   useContext,
   useEffect,
-  useMemo,
   useReducer,
 } from "react";
 import { RoxFetcherResult } from "rox-browser";
-import { FeatureFlags } from "../configuration/FeatureFlags";
-import { QueryParams } from "../configuration/QueryParams";
+import { FeatureFlags } from "./FeatureFlags";
+import { missingRequiredQueryParameters, QueryParams } from "../../configuration/QueryParams";
 import Rox from 'rox-browser'
-import { SDK_MS_TO_FIRST_FETCH } from "../configuration/Envs";
+import { SDK_MS_TO_FIRST_FETCH } from "../../configuration/Envs";
 
 type ContextState = {
   initialized: boolean;
   initializationFailed: boolean;
   featureFlags: typeof FeatureFlags;
   historyFetchEvents: RoxFetcherResult[];
-  attemptRoxSetup?: ()=> void
 };
 
 type Action =
   | { type: "initialized" }
-  | { type: "initializedFailed" }
+  | { type: "initializationFailed" }
   | { type: "fetchedResult"; payload: RoxFetcherResult };
 
 const initialState = {
@@ -39,7 +37,7 @@ function reducer(state: ContextState, action: Action): ContextState {
   switch (action.type) {
     case "initialized":
       return { ...state, initialized: true, initializationFailed: false };
-    case "initializedFailed":
+    case "initializationFailed":
       return { ...state, initializationFailed: true };
     case "fetchedResult":
       return {
@@ -61,16 +59,17 @@ export const FeatureFlagsContextProvider = ({
 }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const attemptRoxSetup = useCallback(async () => {
+  const roxSetup = useCallback(async () => {
     try {
-      console.log("Initializing rox")
+      console.log("Initializing SDK")
       await Rox.setup(QueryParams.environment_id, {
-        debugLevel: QueryParams.debugSdk ? 'verbose' : undefined,
+        debugLevel: QueryParams.debug_sdk ? 'verbose' : undefined,
         configurationFetchedHandler: (fetcherResult: RoxFetcherResult) => {
+          console.log("fetchedResult", fetcherResult.fetcherStatus, fetcherResult.hasChanges ? "has changes" : "", fetcherResult.errorDetails || '')
           dispatch({type: "fetchedResult", payload: fetcherResult})
         },
       });
-      console.log("Rox was initialized")
+      console.log("SDK was initialized")
       dispatch({type: "initialized"})
 
       setTimeout(async ()=> {
@@ -78,24 +77,20 @@ export const FeatureFlagsContextProvider = ({
         //Forcing the fetch makes sure it will be
         Rox.fetch()
       }, SDK_MS_TO_FIRST_FETCH)
-
     } catch (err) {
-      console.error("Rox initialization failed", err)
-      dispatch({type: "initializedFailed"})
+      console.error("SDK initialization failed", err)
+      dispatch({type: "initializationFailed"})
     }
   }, []);
 
   useEffect(() => {
-    attemptRoxSetup();
-  }, [attemptRoxSetup]);
-
-  const value = useMemo(()=> ({
-    ...state,
-    attemptRoxSetup
-  }), [state, attemptRoxSetup])
+    if(!missingRequiredQueryParameters()) {
+      roxSetup();
+    }
+  }, [roxSetup]);
 
   return (
-    <FeatureFlagsContext.Provider value={value}>
+    <FeatureFlagsContext.Provider value={state}>
       {children}
     </FeatureFlagsContext.Provider>
   );
