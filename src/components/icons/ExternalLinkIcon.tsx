@@ -5,8 +5,6 @@ export const ExternalLinkIcon = () => {
     <Icon
       className="externalLinkIcon"
       aria-hidden="true"
-      // width={90}
-      // height={90}
     />
   );
 };
