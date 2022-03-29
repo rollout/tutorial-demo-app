@@ -4,7 +4,7 @@ import { ExternalLinkIcon } from "./icons/ExternalLinkIcon";
 
 interface Props {
   flag: {name: string}
-  text?: string | ((flagName: string) => ReactElement | string)
+  text: ((flagName: string) => ReactElement | string)
 }
 
 export function FlagLink({ flag, text }: Props) {
@@ -15,13 +15,9 @@ export function FlagLink({ flag, text }: Props) {
     window.open(url, "popup", "width=1500,height=1000");
   };
 
-  const linkText = typeof text === "function" ? text(flag.name)
-                  : typeof text === "string" ? text
-                  : flag.name
-
   return (
     <a className="ff-link" href={url} target="_blank" rel="noopener noreferrer" onClick={openInPopup}>
-      {linkText}
+      {text(flag.name)}
       <ExternalLinkIcon />
     </a>
   );

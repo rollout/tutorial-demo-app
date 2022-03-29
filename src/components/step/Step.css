@@ -10,31 +10,7 @@
 }
 
 .Step.is-innactive {
-    /* background-color: grey; */
     opacity: 0.4;
-}
-
-.Step.is-success {
-
-}
-
-.Step-numberWrapper {
-    display: flex;
-}
-
-.Step-number {
-    width: var(--step-number-size);
-    height: var(--step-number-size);
-    flex: 0 0 var(--step-number-size);
-    margin: 0;
-    margin-right: var(--step-number-rightSpace);
-    margin-top: 0.5rem;
-    font-size: 1.25rem;
-    line-height: var(--step-number-size);
-    text-align: center;
-    border-radius: 50%;
-    background-color: var(--avatar-color);
-    color: var(--color);
 }
 
 .Step-title {
@@ -43,28 +19,6 @@
     font-weight: 500;
     margin: 0;
     margin-bottom: 0.75rem;
-}
-
-
-@media (max-width: 70rem) {
-    /* Save some horizontal space by putting the Step number at the left of the title */
-    .Step-numberWrapper {
-        /* No flex anymore */
-        display: block; 
-        position: relative;
-    }
-    .Step-numberWrapper .Step-title {
-        /* make room at the left of the title to put the number */
-        margin-left: calc(var(--step-number-size) + var(--step-number-rightSpace));
-        /* make room at the bottom of the title so the number doesn't collide with the description */
-        margin-bottom: calc(var(--step-number-size) - var(--step-title-fontSize))
-    }
-    .Step-number {
-        /* vertically align the number with the title, based on their dimensions  */
-        position: absolute;
-        top: calc( (var(--step-number-size) - var(--step-title-fontSize)) / 2 * -1);
-        margin: 0;
-    }
 }
 
 .Step-description {
@@ -89,18 +43,4 @@
 
 .Step-successText {
     color: var(--success-color);
-    /* font-weight: 500; */
-}
-
-.Step-separator {
-    display: block;
-    border-bottom: 1px solid var(--color);
-    opacity: 0.5;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 150px;
-    min-width: 50px;
-    width: 40%;
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
 }

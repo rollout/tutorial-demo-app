@@ -12,7 +12,6 @@ interface Props {
 export const Step = forwardRef<HTMLDivElement, Props>(({ number, title, active, children}: Props, ref) => {
   return (
     <div ref={ref} className={`Step ${!active ? "is-innactive" : ""}`}>
-      {/* <h4 className="Step-number">{number}</h4> */}
       <div className="Step-content">
         <h5 className="Step-title">Step {number < 9 ? `0${number}` : number}: {title}</h5>
         {children}
