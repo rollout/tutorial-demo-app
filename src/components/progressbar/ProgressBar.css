@@ -12,7 +12,6 @@
 }
 
 .progress-bar {
-    display: block;
     width: 100%;
     height: var(--progressbar-height);
     background-color: var(--progressbar-uncomplete-color);
