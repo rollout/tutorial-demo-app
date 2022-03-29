@@ -16,6 +16,6 @@
 
 .demoApplicationDisabled-message {
     font-size: 1.8rem;
-    color: var(--badge-secondary-color);
+    color: var(--color-grey);
     padding: 2rem;
 }

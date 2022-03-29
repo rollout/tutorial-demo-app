@@ -16,14 +16,11 @@ body {
 }
 
 :root {
-  --badge-secondary-color: #75777a;
-  /* HUI primary-dark */
-  --badge-primary-color: #0167a1;
-  --badge-error-color: #a10129;
+  --color-grey: #75777a;
+  --error-color: #a10129;
   --background-color: #242C34;
   --color: white;
   --link-color: #289CE1;
-  --avatar-color: #563C8B;
   --code-color: #61dafb;
   --success-color: #00CC75;
 }
@@ -61,13 +58,12 @@ button.link {
   font-weight: 500;
 }
 
-.ff-name {
-  font-weight: 600;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
 .ff-link .externalLinkIcon {
   margin-left: 0.5em;
+  fill: currentColor;
+  margin-bottom: -3px;
+  width: 1.3em;
+  height: 1.3em;
 }
 
 code {
@@ -89,10 +85,6 @@ code {
 p {
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
-}
-
-.checkIcon {
-  color: var(--success-color);
 }
 
 h1 {
