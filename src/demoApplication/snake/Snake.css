@@ -1,0 +1,15 @@
+#SnakeDemoApp {
+  color: var(--color);
+}
+
+#SnakeDemoApp .restart {
+  margin-left: 2rem;
+}
+
+#SnakeDemoApp .subtitle {
+  margin-bottom: 1rem;
+}
+
+#SnakeDemoApp * {
+  box-sizing: content-box;
+}

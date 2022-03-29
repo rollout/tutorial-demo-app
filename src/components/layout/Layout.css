@@ -1,0 +1,84 @@
+.layout {
+    width: 100vw;
+    height: 100vh;
+    min-width: 51rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.layout-demoAppWrapper {
+    background-color: var(--background-color);
+    min-width: 20rem;
+    flex: 1 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.layout-demoApp {
+    padding: 2rem 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-demoApp-footer {
+    padding: 1rem 0.5rem;
+    bottom: 0;
+    align-self: stretch;
+    flex: 0 0 auto;
+    background-color: rgba(221, 221, 221, 0.2);
+    color: var(--color);
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.layout-sidepanel {
+    max-width: 45rem;
+    min-width: 28rem;
+    max-height: 100vh;
+    background-color: var(--background-color);
+    overflow: auto;
+    flex: 1 1;
+}
+
+.sidepanel {
+    padding: 3rem 3rem;
+    padding-top: 0;
+    position: relative;
+}
+
+.sidepanel-header {
+    position: sticky;
+    z-index: 1;
+    top: -140px;
+    padding-top: 3rem;
+}
+
+.sidepanel-title {
+    margin: 2rem 0;
+    font-size: 1.875rem;
+    line-height: 2.75rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+.sidepanel-logo {
+    margin-left: auto;
+}
+
+.sidepanel-content {
+    padding: 2rem 0;
+    overflow: auto;
+}
+
+.sidepanel-sectionTitle {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: bold;
+}

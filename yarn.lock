@@ -1112,6 +1112,10 @@
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@bugsnag/safe-json-stringify/-/safe-json-stringify-6.0.0.tgz#22abdcd83e008c369902976730c34c150148a758"
   integrity sha512-htzFO1Zc57S8kgdRK9mLcPVTW1BY2ijfH7Dk2CeZmspTWKdKqSo1iwmqrq2WtRjFlo8aRZYgLX0wFrDXF/9DLA==
+"@cloudbees/honeyui-icons@^3.0.0-alpha.3":
+  version "3.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@cloudbees/honeyui-icons/-/honeyui-icons-3.0.0-alpha.3.tgz#a4274adf8d5cf747e2322d3e68b2196b5d57f40b"
+  integrity sha512-LZO30BVlOXECkLfCLcQjlPPROyODXdt6+2AiV1ghnppKgME7w9d81x9skrZNbY7qZ8cnHF1VkBY/7EhIh3k7rA==
 
 "@csstools/normalize.css@*":
   version "12.0.0"

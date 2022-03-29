@@ -11,41 +11,59 @@ body {
   min-width: 500px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --badge-secondary-color: #75777a;
   /* HUI primary-dark */
   --badge-primary-color: #0167a1;
   --badge-error-color: #a10129;
-}
-
-body.theme-dark {
-  --background-color: #282c34;
+  --background-color: #242C34;
   --color: white;
-  --link-color: #61dafb;
-  --code-color: #ffff00;
-  --success-color: rgb(0, 231, 0);
+  --link-color: #289CE1;
+  --avatar-color: #563C8B;
+  --code-color: #61dafb;
+  --success-color: #00CC75;
 }
 
-body.theme-light {
+.errorPage,
+.layout-demoAppWrapper {
   --background-color: #f3f7ff;
   --color: #3f3f3f;
   /* HUI primary */
   --link-color: #007acc;  
-  --code-color: #9700fd;
-  --success-color: green;
+  --code-color: #0f6629;
 }
-
 
 a {
   color: var(--link-color);
 }
 
+button.link {
+  color: var(--link-color);
+  cursor: pointer;
+  background-color: unset;
+  border: 0;
+  text-decoration: underline;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
 .ff-link {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  display: inline-block;
+  margin-top: 0.5rem;
   margin-left: 2px;
+  font-size: 1rem;
   margin-right: 2px;
+  font-weight: 500;
+}
+
+.ff-name {
   font-weight: 600;
-  white-space: nowrap;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .ff-link .externalLinkIcon {
@@ -55,6 +73,16 @@ a {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   color: var(--code-color);
+}
+
+.value-true {
+  color: var(--success-color);
+  font-weight: bold;
+}
+
+.value-text {
+  color: var(--code-color);
+  font-weight: bold;
 }
 
 
@@ -69,7 +97,7 @@ p {
 
 h1 {
   margin-top: 3rem;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   margin-bottom: 1.5rem;
 }
 

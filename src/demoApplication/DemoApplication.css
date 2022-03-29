@@ -1,0 +1,21 @@
+.demoApplication-wrapper {
+    min-width: 200px;
+    flex-grow: 1;
+    position: relative;
+}
+
+.demoApplicationDisabled {
+    margin-top: 100px;
+    color: var(--color);
+    width: 100%;
+}
+
+.demoApplicationDisabled-logo {
+    max-width: 400px;
+}
+
+.demoApplicationDisabled-message {
+    font-size: 1.8rem;
+    color: var(--badge-secondary-color);
+    padding: 2rem;
+}
