@@ -1,6 +1,6 @@
-import { FlagLink } from "../../../components/FlagLink";
-import { Step, StepActionLink, StepDescription, StepStrongText, StepSuccessText } from "../../../components/step/Step";
-import { useFeatureFlags } from "../../../lib/featureManagement/FeatureFlagsContext";
+import { FlagLink } from "../../components/FlagLink";
+import { Step, StepActionLink, StepDescription, StepStrongText, StepSuccessText } from "../../components/step/Step";
+import { useFeatureFlags } from "../../lib/featureManagement/FeatureFlagsContext";
 import { StepComponent, StepComponentProps } from "../StepTypes";
 import { forwardRef, useEffect } from "react";
 

@@ -4,9 +4,9 @@ import { useCallback, useState } from "react";
 import "./App.css";
 import { Layout } from "./components/layout/Layout";
 import { DemoApplication } from "./demoApplication/DemoApplication";
-import { BooleanFeature } from "./tutorial/steps/BooleanFeature/BooleanFeature";
-import { StepComponent } from "./tutorial/steps/StepTypes";
-import { StringFeature } from "./tutorial/steps/StringFeature/StringFeature";
+import { BooleanFeature } from "./steps/BooleanFeature/BooleanFeature";
+import { StepComponent } from "./steps/StepTypes";
+import { StringFeature } from "./steps/StringFeature/StringFeature";
 
 const Steps: StepComponent[] = [
   BooleanFeature,

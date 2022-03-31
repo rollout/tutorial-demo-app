@@ -1,9 +1,9 @@
-import { FlagLink } from "../../../components/FlagLink";
+import { FlagLink } from "../../components/FlagLink";
 import {
   Step, StepActionLink, StepDescription, StepStrongText, StepSuccessText
-} from "../../../components/step/Step";
+} from "../../components/step/Step";
 import { StepComponent, StepComponentProps } from "../StepTypes";
-import { useFeatureFlags } from "../../../lib/featureManagement/FeatureFlagsContext";
+import { useFeatureFlags } from "../../lib/featureManagement/FeatureFlagsContext";
 import { forwardRef, useEffect } from "react";
 
 export const StringFeature: StepComponent = forwardRef<HTMLDivElement, StepComponentProps>(({number, active, current, onSuccessChange}: StepComponentProps, ref) => {
