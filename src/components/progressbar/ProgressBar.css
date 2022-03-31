@@ -1,0 +1,30 @@
+.progress {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    --progressbar-height: 5px;
+    --progressbar-uncomplete-color: white;
+    --progressbar-complete-color: #007ACC;
+}
+
+.progress-bar {
+    width: 100%;
+    height: var(--progressbar-height);
+    background-color: var(--progressbar-uncomplete-color);
+}
+
+.progress-barCompleted {
+    background-color: var(--progressbar-complete-color);
+    height: inherit;
+}
+
+.progress-number {
+    color: var(--progressbar-complete-color);
+    margin-left: 0.5rem;
+    font-weight: 500;
+    font-size: small;
+}

@@ -1,0 +1,1 @@
+Copied from https://github.com/MaelDrapier/react-simple-snake

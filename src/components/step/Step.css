@@ -1,0 +1,46 @@
+.Step {
+    text-align: left;
+    line-height: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+
+    --step-number-size: 2.25rem;
+    --step-number-rightSpace: 0.75rem;
+    --step-title-fontSize: 1.125rem;
+}
+
+.Step.is-innactive {
+    opacity: 0.4;
+}
+
+.Step-title {
+    font-size: var(--step-title-fontSize);
+    line-height: var(--step-title-fontSize);
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 0.75rem;
+}
+
+.Step-description {
+    font-size: 0.875rem;
+    margin: 0.25rem 0;
+}
+
+
+.Step-actionLink,
+.Step-actionLink > a {
+    text-decoration: none;
+}
+
+.Step-actionLink:hover a,
+.Step-actionLink:focus a {
+    text-decoration: underline;
+}
+
+.Step-strongText {
+    font-weight: bold;
+}
+
+.Step-successText {
+    color: var(--success-color);
+}

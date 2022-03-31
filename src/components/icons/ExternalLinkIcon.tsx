@@ -1,6 +1,10 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExternalLinkAlt as icon } from '@fortawesome/free-solid-svg-icons'
+import { ReactComponent as Icon } from "@cloudbees/honeyui-icons/svg/leave_system.svg";
 
 export const ExternalLinkIcon = () => {
-    return <FontAwesomeIcon icon={icon} className="externalLinkIcon" />
-}
+  return (
+    <Icon
+      className="externalLinkIcon"
+      aria-hidden="true"
+    />
+  );
+};
