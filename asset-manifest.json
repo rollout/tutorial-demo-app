@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/tutorial-demo-app/static/css/main.a7bc94a1.css",
-    "main.js": "/tutorial-demo-app/static/js/main.bba5ed36.js",
+    "main.css": "/tutorial-demo-app/static/css/main.61d3fd94.css",
+    "main.js": "/tutorial-demo-app/static/js/main.20d5eac4.js",
+    "static/media/noallexperiments.svg": "/tutorial-demo-app/static/media/noallexperiments.34d7756ec68880fec7de3e25b4f65753.svg",
+    "static/media/hidden_empty_state.svg": "/tutorial-demo-app/static/media/hidden_empty_state.1ed39fd22331d44a4873c64dbdb9b751.svg",
+    "static/media/cloudbees-infinity-vertical-white.svg": "/tutorial-demo-app/static/media/cloudbees-infinity-vertical-white.c579510069650e6c713bd4be99181acb.svg",
     "index.html": "/tutorial-demo-app/index.html",
-    "main.a7bc94a1.css.map": "/tutorial-demo-app/static/css/main.a7bc94a1.css.map",
-    "main.bba5ed36.js.map": "/tutorial-demo-app/static/js/main.bba5ed36.js.map"
+    "static/media/leave_system.svg": "/tutorial-demo-app/static/media/leave_system.393d0ff869213e0b090c13b4c76eec24.svg",
+    "main.61d3fd94.css.map": "/tutorial-demo-app/static/css/main.61d3fd94.css.map",
+    "main.20d5eac4.js.map": "/tutorial-demo-app/static/js/main.20d5eac4.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7bc94a1.css",
-    "static/js/main.bba5ed36.js"
+    "static/css/main.61d3fd94.css",
+    "static/js/main.20d5eac4.js"
   ]
 }
