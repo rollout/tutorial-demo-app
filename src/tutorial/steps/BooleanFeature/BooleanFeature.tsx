@@ -17,7 +17,7 @@ export const BooleanFeature: StepComponent = forwardRef<HTMLDivElement, StepComp
   return (
     <Step number={number} title="Release the new game" active={active || current} ref={ref}>
       <StepDescription>
-        Your engineering team has just deployed the game. To release it, enable its targeting and <StepStrongText>set its value to 
+        Your engineering team has just deployed the game. To release it, <StepStrongText>enable its targeting</StepStrongText> and <StepStrongText>set its value to 
         <span className="value-true"> true</span></StepStrongText>.
       </StepDescription>
       <StepDescription>

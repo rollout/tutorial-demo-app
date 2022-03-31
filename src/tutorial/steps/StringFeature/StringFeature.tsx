@@ -20,7 +20,7 @@ export const StringFeature: StepComponent = forwardRef<HTMLDivElement, StepCompo
     <Step number={number} title="Change the difficulty" active={active || current} ref={ref}>
       <StepDescription>You can adjust the speed of the snake with a feature flag!</StepDescription>
       <StepDescription>
-        Enable its targeting and <StepStrongText>set its value to
+        <StepStrongText>Enable its targeting</StepStrongText> and <StepStrongText>set its value to
         <span className="value-text"> fast</span></StepStrongText>.
       </StepDescription>
       <StepDescription>
